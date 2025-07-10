@@ -12,20 +12,18 @@ Aplicación frontend desarrollada en Angular para gestionar tareas, conectándos
 ## Estructura del proyecto
 
 ```
-task-manager-web/
-├── src/
-│   ├── app/
-│   │   ├── components/
-│   │   ├── services/
-│   │   ├── models/
-│   │   └── app.module.ts
-│   ├── assets/
-│   ├── environments/
-│   └── index.html
-├── angular.json
-├── package.json
-├── README.md
-└── ...
+src/app/
+├── tasks/
+│   ├── models/
+│   │   └── task.model.ts
+│   ├── pages/
+│   │   ├── task-list.component.{ts,html,scss}
+│   │   └── task-form.component.{ts,html,scss}
+│   └── services/
+│       └── task.service.ts
+├── app.component.*
+├── app.routes.ts
+└── styles.scss
 ```
 
 ## Instalación
