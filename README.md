@@ -45,7 +45,7 @@ Configura la URL base del backend en el archivo de entorno:
 ```ts
 export const environment = {
   production: false,
-  apiUrl: 'https://localhost:44366/swagger/index.html'
+  apiBaseUrl: 'https://localhost:44366'
 };
 ```
 
