@@ -1,0 +1,29 @@
+<div class="container py-4">
+  <h2 class="mb-3">Listado de tareas</h2>
+
+  <div *ngIf="loading" class="text-center my-5">
+    <div class="spinner-border"></div>
+  </div>
+
+  <table *ngIf="!loading" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Estado</th>
+        <th>Creada</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of tasks">
+        <td>{{ t.title }}</td>
+        <td>{{ t.status }}</td>
+        <td>{{ t.createdAt | date:'short' }}</td>
+        <td>
+          <button class="btn btn-sm btn-primary me-2">Editar</button>
+          <button class="btn btn-sm btn-danger">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
